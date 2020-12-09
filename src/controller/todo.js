@@ -18,6 +18,7 @@ exports.getTodos = async (req, res) => {
         where: {
           isDone: done == 1 ? true : false,
         },
+        order: [["id", "ASC"]],
         attributes: {
           exclude: ["categoryId", "createdAt", "updatedAt"],
         },
@@ -40,6 +41,7 @@ exports.getTodos = async (req, res) => {
           },
         },
       ],
+      order: [["id", "ASC"]],
       attributes: {
         exclude: ["categoryId", "createdAt", "updatedAt"],
       },

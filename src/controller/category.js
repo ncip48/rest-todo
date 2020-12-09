@@ -54,6 +54,7 @@ exports.getCategoryTodos = async (req, res) => {
           categoryId: id,
           isDone: done,
         },
+        order: [["id", "ASC"]],
         attributes: {
           exclude: ["categoryId", "createdAt", "updatedAt"],
         },
@@ -90,6 +91,7 @@ exports.getCategoryTodos = async (req, res) => {
       where: {
         categoryId: id,
       },
+      order: [["id", "ASC"]],
       attributes: {
         exclude: ["categoryId", "createdAt", "updatedAt"],
       },
